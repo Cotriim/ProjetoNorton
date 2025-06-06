@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 class UsuarioDAO {
     public $crm;
@@ -12,8 +12,8 @@ class UsuarioDAO {
     public function cadastrar() {
         $objeto = new Conexao();
         $SQL = "INSERT INTO 
-            medico ( crm, cpf, nome, rua, bairro, cidade, cep)
-            VALUES ( $this->crm, $this->cpf, $this->nome, $this->rua, $this->bairro, $this->cidade, $this->cep);";
+            medico (crm, cpf, nome, rua, bairro, cidade, cep)
+            VALUES ('$this->crm', '$this->cpf', '$this->nome', '$this->rua', '$this->bairro', '$this->cidade', '$this->cep');";
         $objeto->set("sql", $SQL);
         $objeto->query();
         return "Cadastrado com Sucesso";
@@ -21,7 +21,7 @@ class UsuarioDAO {
     
     public function alterar() {
         $objeto = new Conexao();
-        $SQL = "UPDATE medico SET crm ='$this->crm', cpf ='$this->cpf', nome ='$this->nome', rua ='$this->rua', bairro ='$this->bairro', cidade ='$this->cidade', cep ='$this->cep' WHERE crm =$this->crm";
+        $SQL = "UPDATE medico SET cpf ='$this->cpf', nome ='$this->nome', rua ='$this->rua', bairro ='$this->bairro', cidade ='$this->cidade', cep ='$this->cep' WHERE crm ='$this->crm'";
         $objeto->set("sql", $SQL);
         $objeto->query();
         return "Alterado com Sucesso";
@@ -29,10 +29,10 @@ class UsuarioDAO {
 
     public function excluir() {
         $objeto = new Conexao();
-        $SQL = "DELETE FROM medico WHERE crm=$this->crm";
+        $SQL = "DELETE FROM medico WHERE crm='$this->crm'";
         $objeto->set("sql", $SQL);
         $objeto->query();
-        return "Excluir com Sucesso";
+        return "Excluído com Sucesso";
     }
     
     public function set($prop, $value) {
