@@ -1,0 +1,108 @@
+/* CSS simples para teste */
+
+body {
+	background: #f0f0f0 !important;
+	text-align: center !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+section.form {
+	width: 300px !important;
+	margin: 0 auto 20px auto !important;
+	padding: 15px !important;
+	background: #2c3e50 !important;
+	border: 1px solid #1a252f !important;
+	border-radius: 8px !important;
+	color: white !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-size: 14px !important;
+}
+
+section.form input[type="text"] {
+	width: 100% !important;
+	margin: 3px 0 8px 0 !important;
+	padding: 6px !important;
+	border: 1px solid #ddd !important;
+	border-radius: 4px !important;
+	box-sizing: border-box !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-size: 13px !important;
+}
+
+.button-container {
+	text-align: center !important;
+	margin: 20px 0 !important;
+}
+
+.button-container #Cadastrar {
+	background: #2c3e50 !important;
+	color: white !important;
+	border: none !important;
+	padding: 10px 20px !important;
+	border-radius: 6px !important;
+	cursor: pointer !important;
+	width: 200px !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	transition: background 0.2s ease !important;
+}
+
+.button-container #Cadastrar:hover {
+	background: #34495e !important;
+}
+
+#tbl {
+	width: 90% !important;
+	max-width: 900px !important;
+	margin: 0 auto !important;
+	border-collapse: collapse !important;
+	background: white !important;
+	border-radius: 8px !important;
+	overflow: hidden !important;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+#tbl th, #tbl td {
+	padding: 12px 15px !important;
+	border: none !important;
+	text-align: left !important;
+	border-bottom: 1px solid #f0f0f0 !important;
+}
+
+#tbl th {
+	background: #2c3e50 !important;
+	color: white !important;
+	font-weight: 600 !important;
+	font-size: 13px !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.5px !important;
+}
+
+#tbl td {
+	font-size: 13px !important;
+	color: #333 !important;
+}
+
+#tbl tr:nth-child(even) {
+	background: #fafafa !important;
+}
+
+#tbl tr:hover {
+	background: #f5f5f5 !important;
+}
+
+#tbl tr:last-child td {
+	border-bottom: none !important;
+}
+
+/* Ícones da tabela */
+#tbl img {
+	cursor: pointer !important;
+	transition: transform 0.2s ease !important;
+}
+
+#tbl img:hover {
+	transform: scale(1.05) !important;
+} 

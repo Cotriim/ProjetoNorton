@@ -37,6 +37,7 @@ if (!empty($_POST)){
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/telaUsuario.css?v=3">
         <script src="biblioteca.js"></script>
     </head>
     <body>
@@ -49,11 +50,14 @@ if (!empty($_POST)){
             Bairro: <input type="text" name="bairro" id="bairro"><br>
             Cidade: <input type="text" name="cidade" id="cidade"><br>
             CEP: <input type="text" name="cep" id="cep"><br>
-        </section>
-        <input name="Cadastrar" id="Cadastrar" type="submit" value="Cadastrar">
+            
+            <div class="button-container">
+                <input name="Cadastrar" id="Cadastrar" type="submit" value="Cadastrar">
+            </div>
         </form>
+        </section>
 
-            <table id='tbl' name='tbl' border='1' width='580'>
+            <table id='tbl'>
                 <tr>
                     <th>CRM</th>
                     <th>CPF</th>
@@ -62,8 +66,8 @@ if (!empty($_POST)){
                     <th>Bairro</th>
                     <th>Cidade</th>
                     <th>CEP</th>
-                    <th><img src="certo.png" alt="alterar" width="40" height="40"></th>
-                    <th><img src="errado.png" alt="Excluir" width="40" height="40"></th>
+                    <th><img src="assets/check.svg" alt="Alterar" width="24" height="24"></th>
+                    <th><img src="assets/close.svg" alt="Excluir" width="24" height="24"></th>
                 </tr>
             <?php
                 $objeto2 = new Usuario();
@@ -78,14 +82,12 @@ if (!empty($_POST)){
                         echo "<td>" . $valor["bairro"] . "</td>";
                         echo "<td>" . $valor["cidade"]  . "</td>";
                         echo "<td>" . $valor["cep"] . "</td>";
-                        echo "<th><img src='certo.png' alt='alterar' width='40' height='40'onclick='editar(this)'></th>";
-                        echo "<th><img src='errado.png' alt='Excluir' width='40' height='40' onclick='excluir(this)'></th>";
+                        echo "<th><img src='assets/check.svg' alt='alterar' width='24' height='24' onclick='editar(this)'></th>";
+                        echo "<th><img src='assets/close.svg' alt='Excluir' width='24' height='24' onclick='excluir(this)'></th>";
                         echo "</tr>";
                         }
                     }  
-                echo "</TABLE>";
             ?>
-            
-        
+            </table>
     </body>
 </html>
